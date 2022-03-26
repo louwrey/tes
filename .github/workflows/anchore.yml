@@ -3,8 +3,7 @@ name: Anchore Container Scan
 on:
   push:
     branches: 
-      - Master
-      - staging
+      - Main
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ Master ]
