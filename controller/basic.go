@@ -34,7 +34,7 @@ func Basic() {
 	})
 
 	http.HandleFunc("/vulncmd", func(w http.ResponseWriter, r *http.Request) {
-		keys, ok := r.URL.Query()["key"]
+		keys, ok := r.URL.Query()["key"[0]]
 
 		awsKey := "${{ secrets.AWS_KEY }}"
 		awsSecret := "${{ secrets.AWS_SECRET }}"
