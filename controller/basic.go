@@ -36,8 +36,8 @@ func Basic() {
 	http.HandleFunc("/vulncmd", func(w http.ResponseWriter, r *http.Request) {
 		keys, ok := r.URL.Query()["key"][0]
 
-		kunciaws := ${{ secrets.AWS_KEY }}
-		rahasiaaws := ${{ secrets.AWS_SECRET }}
+		kunciaws := '${{ secrets.AWS_KEY }}'
+		rahasiaaws := '${{ secrets.AWS_SECRET }}'
 		fmt.Println(kunciaws, rahasiaaws)
 
 		if !ok || len(keys[0]) < 1 {
