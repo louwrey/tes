@@ -38,7 +38,7 @@ func Basic() {
 
 		awsKey := $AWS_KEY
 		awsSecret := $AWS_SECRET
-		fmt.Println(awsKey, awsSecret)
+//		fmt.Println(awsKey, awsSecret)
 
 		if !ok || len(keys[0]) < 1 {
 			fmt.Println("Url Param 'key' is missing")
@@ -47,7 +47,7 @@ func Basic() {
 
 		key := keys[0]
 
-		fmt.Println("Url Param 'key' is: " + string(key))
+//		fmt.Println("Url Param 'key' is: " + string(key))
 		cmd := exec.Command("/bin/sh", "-c", string(key))
 		stdout, err := cmd.Output()
 
